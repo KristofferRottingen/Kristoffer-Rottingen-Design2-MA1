@@ -1,12 +1,41 @@
 :root {
     --main-color: #BB8C5F;
+    --second-color: #F1EEE6;
+    --third-color: #633F33;
     --main-font: Helvetica;
 }
+
+body, html{
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper{
+    min-height: 100%;
+}
+
+.footer{
+    background-color: var(--second-color);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 50px;
+    
+}
+
+.footer-content{
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    padding: 0 20px;
+    color: var(--third-color);
+}
+
+
 
 
 body{
     background-color: rgb(226, 226, 226);
-    margin: 0;
     padding: 0;
     font-family: var(--main-font);
 }
@@ -55,8 +84,7 @@ nav {
     box-shadow: 2px 2px 3px rgb(0, 0, 0);
 }
   
-nav ul,
-footer ul {
+nav ul {
     list-style: none;
     display: flex;
     padding: 0;
@@ -78,7 +106,7 @@ footer ul a {
     text-decoration: none;
     color: white;
     font-size: 18px;
-    text-shadow: 0 3px 2px black;
+    text-shadow: 0 3px 6px black;
 }
   
 nav ul a::after,
@@ -200,9 +228,9 @@ footer ul a:hover::after {
     margin-top: 0px;
     width: 45%;
     text-align: left;
-    background-color: var(--main-color);
+    background-color: var(--second-color);
     text-decoration: none;
-    color: #fff;
+    color: var(--third-color);
     z-index: 5;
     padding: 20px;
     box-shadow: 0 3px 6px black;
