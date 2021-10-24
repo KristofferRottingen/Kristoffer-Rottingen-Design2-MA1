@@ -1,13 +1,22 @@
+:root {
+    --main-color: #BB8C5F;
+    --main-font: Helvetica;
+}
+
+
 body{
     background-color: rgb(226, 226, 226);
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--main-font);
 }
 
+
+/* Nav section ---> */
 .banner{
-    background-image: url("../images/img1.jpg");
-    min-height: 40vh;
+    background-image: url("../images/banner-bg.jpg");
+    min-height: 60vh;
+    height: 100%;
     width: auto;
     padding: 0;
     justify-content: center;
@@ -21,12 +30,27 @@ body{
 
 .banner h1{
     color: white;
-    text-shadow: 2px 3px black;
+    text-shadow: 0 3px 6px black;
     font-size: 40px;
+    font-family: var(--main-font);
+}
+
+h1 span{
+    text-decoration: underline 5px;
+    color: white;
+}
+
+header{
+    background-color: var(--main-color);
 }
 
 nav {
     padding: 30px 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: centerz;
     box-shadow: 2px 2px 3px rgb(0, 0, 0);
 }
   
@@ -36,14 +60,23 @@ footer ul {
     display: flex;
     padding: 0;
     justify-content: space-evenly;
-    width: auto;
+    max-width: 700px;
+    width: 100%;
     margin: auto;
+}
+
+.logo{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 20px;
 }
   
 nav ul a,
 footer ul a {
     text-decoration: none;
-    color: #000;
+    color: white;
+    text-shadow: 0 3px 2px black;
 }
   
 nav ul a::after,
@@ -52,7 +85,7 @@ footer ul a::after {
     display: block;
     width: 0;
     height: 4px;
-    background: #000;
+    background: white;
     transition: width 0.3s;
 }
   
@@ -66,18 +99,51 @@ footer ul a:hover::after {
     font-weight: bold;
 }
 
+/* Nav section ---> */
+
+/* Card content ---> */
+
 .card-container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    padding: 40px;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.card-container{
+    background-image: url("../images/products-bg.jpg");
+    min-height: 50vh;
+    height: 100%;
     width: auto;
-    max-width: 1092px;
+    padding: 0;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.card-container h2{
+    font-size: 27px;
+    padding-top: 20px;
+    color: white;
+    text-shadow: 0 3px 6px black;
+}
+
+.card-content{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    padding: 50px 20px;
 }
 
 @media (max-width: 1060px){
-    .card-container{
+    .card-content{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
     }
 
     .cards{
@@ -88,11 +154,75 @@ footer ul a:hover::after {
 .cards{
     max-width: 300px;
     max-height: 500px;
-    background-color: white;
+    background-color: var(--main-color);
     border-radius: 6px;
     box-shadow: 0 3px 4px black;
 }
 
+.cards img{
+    max-width: 300px;
+}
+
 .cards h2, .cards p{
-    padding: 10px;
+    padding: 5px 15px;
+    color: white;
+    text-shadow: 0 3px 6px black;
+}
+
+.cards p{
+    line-height: 25px;
+}
+
+/* Card content ---> */
+
+
+.textcontent-text h2 {
+    font-size: 27px;
+    padding: 20px;
+    padding-left: 30px;
+    margin: 0;
+}
+  
+.textcontent-container{
+    background-image: url("../images/textcontent-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-height: 90vh;
+    min-height: 50vh;
+    padding: 70px 0 20px 30px ;
+}
+  
+.textcontent-text {
+    margin: 50px 0px;
+    margin-top: 0px;
+    width: 45%;
+    text-align: left;
+    background-color: var(--main-color);
+    text-decoration: none;
+    color: #fff;
+    z-index: 5;
+    padding: 20px;
+    box-shadow: 0 3px 6px black;
+}
+  
+.textcontent-text p {
+    display: left;
+    padding: 10px 30px;
+    line-height: 30px;
+    margin: 0;
+}
+
+@media (max-width: 800px){
+    .textcontent-text p span{
+        display: none;
+    }
+
+    .textcontent-text h2, .cards h2, .card-container h2{
+        font-size: 20px;
+    }
+
+    .banner h1{
+        font-size: 25px;
+    }
 }
