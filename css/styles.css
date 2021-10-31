@@ -294,7 +294,25 @@ footer ul a:hover::after {
     width: auto;
     padding: 80px 50px;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
+}
+
+@media (max-width: 1070px){
+    .products-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 770px){
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px){
+    .product-banner{
+        max-height: 30vh;
+    }
 }
 
 .product-card{
@@ -317,4 +335,17 @@ footer ul a:hover::after {
     font-size: 18px;
     font-weight: 600;
 }
+
+.icons{
+    width: 35px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+.icons:hover{
+    transition: all 0.3 ease;
+    width: 36px;
+}
+
 /* Product page -----> */
